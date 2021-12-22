@@ -51,7 +51,7 @@
 
 /* partie dices */
 
-*:not(i) {
+/* *:not(i) {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 }
@@ -161,4 +161,4 @@ a {
 	padding: 15px 0;
 	text-decoration: none;
 	border-radius: 3px;
-}
+} */

@@ -3,11 +3,8 @@ import BlogList from './BlogList';
 
 const Home = () => {
     // lister les joueurs et leurs stats 
-    const [blogs, setBlogs] = useState([
-        { name: 'Sem', score: '750', roll:'01', id: 1},
-        { name: 'Yiahyiah', score: '550', roll:'01', id: 2},
-        { name: 'Juan', score: '950', roll:'01', id: 3}
-    ]);
+    // on a remplace par null avec le useEffet vide []
+    const [blogs, setBlogs] = useState(null);
 
     const [name, setName] = useState('mario');
 
@@ -31,7 +28,13 @@ const Home = () => {
 
     //hook to fetch data
     useEffect(() => {
-        console.log('use effect ran');
+        fetch( 'http://localhost:8000/blogs')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            setBlogs(data);
+        });
     }, []);// depedencies
 
     return (
@@ -51,8 +54,8 @@ const Home = () => {
 
                 <br/> <br/>
 
-          <BlogList blogs ={blogs} title ="All rolls" handleDelete ={handleDelete} />
-          <BlogList blogs ={blogs.filter ((blog) => blog.roll == '01')} title ="First rolls" />
+            {blogs && <BlogList blogs ={blogs} title ="All rolls" handleDelete ={handleDelete} />}
+          {/* <BlogList blogs ={blogs.filter ((blog) => blog.roll == '01')} title ="First rolls" /> */}
 
         </div>
     );

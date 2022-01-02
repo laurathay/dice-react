@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Home from './Home';
+import rollit from './rollit.svg';
 
 function App() {
   
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <div className ="content">
+        <img src={rollit} className="App-roll" alt="rollit"/>
         <Home/>
       </div>
     </div>

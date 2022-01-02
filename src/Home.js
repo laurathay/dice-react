@@ -5,6 +5,7 @@ const Home = () => {
     // lister les joueurs et leurs stats 
     // on a remplace par null avec le useEffet vide []
     const [blogs, setBlogs] = useState(null);
+    const [isPending, setIsPending] = useState(true);
 
     const [name, setName] = useState('mario');
 
@@ -28,13 +29,16 @@ const Home = () => {
 
     //hook to fetch data
     useEffect(() => {
-        fetch( 'http://localhost:8000/blogs')
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            setBlogs(data);
-        });
+        setTimeout(() => {
+            fetch( 'http://localhost:8000/blogs')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setBlogs(data);
+                setIsPending(false);
+            }); 
+        }, 1000);
     }, []);// depedencies
 
     return (
@@ -55,6 +59,7 @@ const Home = () => {
                 <br/> <br/>
 
             {blogs && <BlogList blogs ={blogs} title ="All rolls" handleDelete ={handleDelete} />}
+            { isPending && <div> Loading... </div> }
           {/* <BlogList blogs ={blogs.filter ((blog) => blog.roll == '01')} title ="First rolls" /> */}
 
         </div>

@@ -1,0 +1,6 @@
+.cardContainer {
+    width: 586px;
+    background-color: teal;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px black;
+}

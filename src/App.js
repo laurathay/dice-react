@@ -1,15 +1,17 @@
-import Navbar from './Navbar';
+import {Navbar} from './components/Navbar';
 import Home from './Home';
-import rollit from './rollit.svg';
+import {Button} from './components/Button';
+import {Card} from './components/organisms/Card.component';
 
 function App() {
   
   return (
     <div className="App">
-      <Navbar />
-      <div className ="content">
-        <img src={rollit} className="App-roll" alt="rollit"/>
-        <Home/>
+      {/* <Navbar /> */}
+      <div className="content">
+        {/* <Button />
+        <Home/> */}
+        <Card />
       </div>
     </div>
   );

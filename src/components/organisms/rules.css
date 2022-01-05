@@ -1,0 +1,70 @@
+.rules {
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+  
+  .rules {
+    background-color: #efeeee;
+    max-width: 1100px;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    line-height: 1.2;
+  }
+  
+  .titlerules {
+    font-size: 86px;
+    background: linear-gradient(147deg, rgba(249,15,216,1) 0%, rgba(245,67,119,1) 26%, rgba(252,28,28,1) 50%, rgba(255,195,13,1) 75%, rgba(114,251,89,1) 100%);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+  }
+  
+  .titlerules2 {
+    font-size: 56px;
+    background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjF9');
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .subhead {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -.003em;
+  }
+
+
+.player{
+  height: 60vh;
+  background: #efeeee;
+  display: grid;
+  place-items: end;
+}
+.playerButton{
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding:2rem;
+  background:#efeeee;
+  border-radius:50%;
+  transition:all 0.3s ease-in;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1),
+    -10px -10px 10px rgba(255,255,255,0.6);
+}
+.playerButton .fas{
+  display:grid;
+  place-items:center;
+  font-size:2rem;
+  color:gray;
+}
+.playerButton:active{
+  box-shadow: inset 10px 10px 10px rgba(0,0,0,0.1),
+    inset -10px -10px 10px rgba(255,255,255,0.6);
+}
+.playerButton:active .fas{
+  color:#721efa;
+}
+

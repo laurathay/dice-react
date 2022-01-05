@@ -49,7 +49,7 @@ const Home = () => {
                   <br/>
 
         <br/>
-                <button onClick={() => setName('Alex')}> change name </button>
+                {/* <button onClick={() => setName('Alex')}> change name </button>
                 <br/>
                 <p> { name } roll number : { roll }</p>
                 <br/>
@@ -59,7 +59,7 @@ const Home = () => {
                 <br/> <br/>
 
             {blogs && <BlogList blogs ={blogs} title ="All rolls" handleDelete ={handleDelete} />}
-            { isPending && <div> Loading... </div> }
+            { isPending && <div> Loading... </div> } */}
           {/* <BlogList blogs ={blogs.filter ((blog) => blog.roll == '01')} title ="First rolls" /> */}
 
         </div>

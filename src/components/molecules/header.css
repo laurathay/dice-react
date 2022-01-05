@@ -1,11 +1,14 @@
 .playerName {
+    /* changement ici */
+    color: white;
     text-align: center;
-    background-color: white;
+    background-color: #FFC700;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    border: 1px solid black;
-    border-radius: 20%;
+    width: 99.9%;
+    margin-bottom: 2em;
+    padding-top: 2em;
+    border-bottom: none;
 }
 
 .burger1 {
@@ -27,6 +30,8 @@
 }
 
 .header {
+    /* changement ici */
+    text-align: center;
     margin: 0;
 }
 
@@ -35,8 +40,9 @@
     order: 1;
     align-self: center;
     flex-grow: 0;
-    margin: 10px 0;
-    width: 20%;
+    /* changement ici */
+    margin: -10px 15px;
+    width: 30%;
 }
 
 .headerContainer {
